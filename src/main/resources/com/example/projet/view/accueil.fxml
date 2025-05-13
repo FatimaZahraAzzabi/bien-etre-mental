@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.projet.controller.AccueilController"
+      alignment="CENTER"
+      spacing="50"
+      prefWidth="800"
+      minWidth="700"
+      maxWidth="Infinity"
+      styleClass="container"
+      stylesheets="@style/style.css">
+
+    <padding>
+        <Insets top="40.0" right="40.0" bottom="40.0" left="40.0"/>
+    </padding>
+
+    <Label text="Calmora"
+           styleClass="app-name"/>
+
+    <!-- Conteneur pour les boutons -->
+    <HBox alignment="CENTER" spacing="20" styleClass="button-container">
+        <Button text="Se connecter"
+                onAction="#handleConnexion"
+                styleClass="btn-principal"/>
+
+        <Button text="S'inscrire"
+                onAction="#handleInscription"
+                styleClass="btn-secondaire"/>
+    </HBox>
+</VBox>

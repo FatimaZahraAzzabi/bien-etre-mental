@@ -1,0 +1,93 @@
+.root {
+    -fx-font-family: 'Segoe UI', Arial, sans-serif;
+    -fx-background-color: #f8f4e9;
+    -fx-padding: 80px;
+}
+
+.container {
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 25, 0, 0, 5);
+    -fx-border-radius: 25;
+    -fx-background-radius: 25;
+    -fx-padding: 60px 80px; /* Padding vertical et horizontal augmenté */
+    -fx-spacing: 40px; /* Espacement accru entre les éléments */
+    -fx-alignment: CENTER;
+    -fx-pref-width: 800px; /* Largeur augmentée */
+    -fx-pref-height: 600px; /* Hauteur augmentée */
+    -fx-max-width: Infinity;
+    -fx-max-height: Infinity;
+}
+
+/* Nom de l'application - plus imposant */
+.app-name {
+    -fx-font-size: 64px; /* Taille de police augmentée */
+    -fx-font-weight: bold;
+    -fx-text-fill: linear-gradient(to right, #d46b08, #873800);
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 107, 8, 0.3), 8, 0, 0, 3);
+    -fx-padding: 0 0 50px 0; /* Espacement accru en dessous */
+}
+
+/* Conteneur pour les boutons */
+.button-container {
+    -fx-spacing: 30px; /* Espacement accru entre boutons */
+    -fx-alignment: CENTER;
+}
+
+/* Bouton principal - plus grand */
+.btn-principal {
+    -fx-background-color: #d46b08;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px; /* Taille de police augmentée */
+    -fx-padding: 20px 50px; /* Padding augmenté */
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 107, 8, 0.5), 10, 0, 0, 5);
+    -fx-min-width: 200px; /* Largeur minimale augmentée */
+}
+
+/* Bouton secondaire - plus grand */
+.btn-secondaire {
+    -fx-background-color: transparent;
+    -fx-text-fill: #d46b08;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px; /* Taille de police augmentée */
+    -fx-padding: 20px 50px; /* Padding augmenté */
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: #d46b08;
+    -fx-border-width: 3px; /* Bordure plus épaisse */
+    -fx-cursor: hand;
+    -fx-min-width: 200px; /* Largeur minimale augmentée */
+}
+
+/* Le reste du CSS reste inchangé */
+.btn-principal:hover, .btn-secondaire:hover,
+.btn-principal:pressed, .btn-secondaire:pressed,
+.btn-principal:focused, .btn-secondaire:focused {
+    /* Styles de hover/press/focus inchangés mais adaptés à la nouvelle taille */
+}
+
+@media (max-width: 800px) { /* Media query ajustée pour la nouvelle taille */
+    .root {
+        -fx-padding: 30px;
+    }
+
+    .container {
+        -fx-padding: 40px;
+        -fx-spacing: 30px;
+        -fx-pref-width: 100%;
+    }
+
+    .app-name {
+        -fx-font-size: 48px;
+        -fx-padding: 0 0 30px 0;
+    }
+
+    .btn-principal, .btn-secondaire {
+        -fx-padding: 15px 30px;
+        -fx-font-size: 16px;
+        -fx-min-width: 150px;
+    }
+}
