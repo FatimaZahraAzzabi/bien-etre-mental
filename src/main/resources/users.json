@@ -1,10 +1,12 @@
 [
   {
-    "email": "admin",
-    "motDePasse": "admin123"
-  },
-  {
-    "email": "user",
-    "motDePasse": "pass456"
+    "prenom": "Wissal",
+    "nom": "Biyi",
+    "email": "wissal@gmail.com",
+    "telephone": "0666666666",
+    "dateNaissance": "2003-10-06",
+    "genre": "Femme",
+    "motDePasse": "12345678"
   }
 ]
+

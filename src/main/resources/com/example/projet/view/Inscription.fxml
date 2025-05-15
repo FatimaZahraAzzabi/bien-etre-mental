@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+
+<?import java.lang.String?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.projet.controller.InscriptionController"
+      styleClass="container inscription-container"
+      stylesheets="@style/style.css"
+      spacing="20"> <!-- Espacement global augmenté -->
+
+    <!-- Padding réduit pour gagner de l'espace -->
+    <padding>
+        <Insets top="20" bottom="20" left="40" right="40"/>
+    </padding>
+
+    <!-- Titre et sous-titre avec espacement réduit -->
+    <VBox spacing="5" alignment="CENTER">
+        <Label text="Calmora" styleClass="app-name"/>
+        <Label text="Chaque jour est une nouvelle chance de prendre soin de toi."
+               styleClass="inscription-subtitle"/>
+    </VBox>
+
+    <!-- Conteneur scrollable pour les champs -->
+    <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+        <VBox styleClass="form-container" spacing="12">
+            <!-- Prénom et Nom -->
+            <HBox spacing="15" alignment="CENTER">
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Prénom" styleClass="form-label"/>
+                    <TextField fx:id="champPrenom" styleClass="form-field" promptText="Votre prénom"/>
+                </VBox>
+                <VBox spacing="5" HBox.hgrow="ALWAYS">
+                    <Label text="Nom" styleClass="form-label"/>
+                    <TextField fx:id="champNom" styleClass="form-field" promptText="Votre nom"/>
+                </VBox>
+            </HBox>
+
+            <!-- Date de naissance -->
+            <VBox spacing="5">
+                <Label text="Date de naissance" styleClass="form-label"/>
+                <DatePicker fx:id="champDateNaissance" styleClass="form-field"/>
+            </VBox>
+
+            <!-- Genre -->
+            <VBox spacing="5">
+                <Label text="Genre" styleClass="form-label"/>
+                <ComboBox fx:id="champGenre" styleClass="form-field">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Femme"/>
+                            <String fx:value="Homme"/>
+                            <String fx:value="Autre"/>
+                            <String fx:value="Préférer ne pas dire"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </VBox>
+
+            <!-- Email -->
+            <VBox spacing="5">
+                <Label text="Email" styleClass="form-label"/>
+                <TextField fx:id="champEmail" styleClass="form-field" promptText="exemple@email.com"/>
+            </VBox>
+
+            <!-- Téléphone -->
+            <VBox spacing="5">
+                <Label text="Téléphone" styleClass="form-label"/>
+                <TextField fx:id="champTelephone" styleClass="form-field" promptText="+33 6 12 34 56 78"/>
+            </VBox>
+
+            <!-- Mot de passe -->
+            <VBox spacing="5">
+                <Label text="Mot de passe (8 caractères minimum)" styleClass="form-label"/>
+                <PasswordField fx:id="champMotDePasse" styleClass="form-field" promptText="••••••••"/>
+            </VBox>
+
+            <!-- Confirmation mot de passe -->
+            <VBox spacing="5">
+                <Label text="Confirmer le mot de passe" styleClass="form-label"/>
+                <PasswordField fx:id="champMotDePasseConfirme" styleClass="form-field" promptText="••••••••"/>
+            </VBox>
+        </VBox>
+    </ScrollPane>
+
+    <!-- Bouton en bas -->
+    <Button text="S'inscrire" onAction="#validerInscription" styleClass="btn-principal"
+            style="-fx-margin: 20 0 0 0;"/>
+
+    <Label fx:id="messageLabel" styleClass="error-message"/>
+</VBox>
