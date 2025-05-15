@@ -11,6 +11,15 @@ target/
 *.iws
 *.iml
 *.ipr
+src/main/java/module-info.java
+ IntelliJ IDEA
+.idea/
+
+# Maven Wrapper
+.mvn/
+
+# Maven pom
+pom.xml
 
 ### Eclipse ###
 .apt_generated
