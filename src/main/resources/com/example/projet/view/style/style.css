@@ -90,4 +90,139 @@
         -fx-font-size: 16px;
         -fx-min-width: 150px;
     }
+
+}
+/* Styles spécifiques à la page d'inscription */
+.inscription-container {
+    -fx-spacing: 25px;
+    -fx-padding: 40px 60px;
+}
+
+.inscription-title {
+    -fx-font-size: 36px;
+    -fx-text-fill: linear-gradient(to right, #d46b08, #873800);
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 30px 0;
+}
+
+.inscription-subtitle {
+    -fx-font-size: 18px;
+    -fx-text-fill: #5a3e36;
+    -fx-font-style: italic;
+    -fx-padding: 0 0 20px 0;
+    -fx-alignment: CENTER;
+    -fx-wrap-text: true;
+    -fx-max-width: 500px;
+}
+
+.form-container {
+    -fx-spacing: 20px;
+    -fx-padding: 20px 0;
+    -fx-alignment: CENTER;
+}
+
+.form-field {
+    -fx-pref-width: 350px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #d46b08;
+    -fx-border-width: 1.5px;
+    -fx-padding: 12px 15px;
+    -fx-font-size: 16px;
+}
+
+.form-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #5a3e36;
+    -fx-padding: 0 0 5px 0;
+}
+
+.gender-container {
+    -fx-spacing: 15px;
+    -fx-padding: 10px 0;
+}
+
+.gender-radio {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5a3e36;
+}
+
+/* Adaptation responsive */
+@media (max-width: 800px) {
+    .inscription-container {
+        -fx-padding: 30px;
+    }
+
+    .form-field {
+        -fx-pref-width: 280px;
+    }
+
+    .inscription-title {
+        -fx-font-size: 28px;
+    }
+}
+/* Ajoutez ces styles à votre fichier CSS existant */
+
+/* Style pour les DatePicker */
+.date-picker, .combo-box {
+    -fx-pref-width: 350px;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-border-color: #d46b08;
+    -fx-border-width: 1.5px;
+    -fx-padding: 8px;
+    -fx-font-size: 16px;
+}
+
+/* Style pour les messages d'erreur */
+.error-message {
+    -fx-text-fill: #d9534f;
+    -fx-font-size: 14px;
+    -fx-padding: 15px 0 0 0;
+}
+
+/* Style pour les champs invalides */
+.form-field:invalid, .date-picker:invalid, .combo-box:invalid {
+    -fx-border-color: #d9534f !important;
+    -fx-effect: dropshadow(three-pass-box, rgba(217, 83, 79, 0.3), 5, 0, 0, 1);
+}
+.form-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #5a3e36;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 5px 0;
+}
+/* Ajoutez à votre fichier style.css */
+
+/* Conteneur principal */
+.container {
+    -fx-pref-height: 600px; /* Hauteur fixe */
+    -fx-max-height: 800px; /* Maximum */
+}
+
+/* ScrollPane transparent */
+.scroll-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+/* Barre de défilement */
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #d46b08;
+    -fx-background-radius: 5px;
+}
+
+/* Réduire la taille des champs si nécessaire */
+.form-field {
+    -fx-pref-height: 35px; /* Au lieu de 40px */
+}
+
+/* Titre plus compact */
+.app-name {
+    -fx-padding: 0 0 10px 0; /* Réduit de 50px */
+    -fx-font-size: 54px; /* Légèrement plus petit */
 }
