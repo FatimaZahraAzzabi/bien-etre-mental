@@ -1,0 +1,10 @@
+[
+  {
+    "email": "admin",
+    "motDePasse": "admin123"
+  },
+  {
+    "email": "user",
+    "motDePasse": "pass456"
+  }
+]
